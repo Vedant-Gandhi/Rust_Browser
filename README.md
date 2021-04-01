@@ -20,6 +20,6 @@ I will soon update the readme accordingly as the updates happen
 
 6.styletree.rs-This tree is generated from css parser tree and it helps to determine the actual dimensions and colors of each element in the DOM.
 
-# I will be posting new image so that it will be easy to understand how all trees work and the actual flow of rendering from HTML and CSS to screen.
+### I will be posting new image so that it will be easy to understand how all trees work and the actual flow of rendering from HTML and CSS to screen.
 
 ## Will update as soon as possible for fresh changes 👍

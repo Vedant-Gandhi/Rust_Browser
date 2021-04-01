@@ -37,8 +37,6 @@ pub struct Color {
     pub a: f32,
 }
 
-
-
 impl Stylesheet{
     pub fn new(css:Vec<Rule>)->Stylesheet{
         Stylesheet{

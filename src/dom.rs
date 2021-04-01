@@ -1,6 +1,8 @@
 //Node Types-Element,Text,Comment
 use std::collections::{HashMap,HashSet};
 use std::fmt;
+
+pub type AttrMap=HashMap<String,String>;
 //Defines a basic Node
 #[derive(PartialEq,Eq)]
 pub struct Node{
@@ -42,7 +44,7 @@ impl Node{
 
     }
 }
-pub type AttrMap=HashMap<String,String>;
+
 
 
  impl fmt::Debug for NodeType{

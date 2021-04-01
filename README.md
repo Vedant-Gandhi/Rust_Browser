@@ -12,5 +12,13 @@ I will soon update the readme accordingly as the updates happen
 
 2.HTMLParser.RS-This file is the html parse engine that will be used by the browser to create DOM.It can parse most the elements such as text,Comments and Data Elements.
 
+3.csselements.RS-This file contains the datastructures and other necessary data to operate with the CSS file.This file has a longer length.
 
-## Currently only this is what I have developed.Will update as soon as possible 👍
+4.cssparser.RS-This file contains the parser engine for css files and is also optimized.
+
+### Update 28/03/2021
+Added CSS Parser to easily parse the CSS files.The datastructures for the same have also been added.Currently suppourted types for colors are only rgba and name base colors.Eg 'blue' ,'green',etc.Suppourt for rgb function coming soon.
+
+Font types are not suppourted by the CSS Parser currently but is to be released in future versions.
+
+## Will update as soon as possible for fresh changes 👍

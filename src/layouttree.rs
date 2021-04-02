@@ -220,14 +220,14 @@ impl<'a> fmt::Debug for LayoutContainer<'a>{
 }
 
 impl Dimensions{
-    fn get_padding_dimensions(&self)->Rectangle{
+    pub fn get_padding_dimensions(&self)->Rectangle{
         self.coordinates.expand(self.padding)
     }
 
-    fn get_border_dimensions(&self)->Rectangle{
+    pub fn get_border_dimensions(&self)->Rectangle{
         self.get_padding_dimensions().expand(self.border)
     }
-    fn get_margin_dimensions(&self)->Rectangle{
+    pub fn get_margin_dimensions(&self)->Rectangle{
         self.get_border_dimensions().expand(self.margin)
     }
 

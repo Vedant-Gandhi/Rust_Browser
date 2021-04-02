@@ -14,7 +14,7 @@ pub enum Display{
     Block,InlineBlock,Inline,None
 }
 impl<'a>  StyleNode<'a>{
-     fn new(node:& 'a Node, stylesheet:& 'a Stylesheet)->StyleNode<'a>{
+     pub fn new(node:& 'a Node, stylesheet:& 'a Stylesheet)->StyleNode<'a>{
         let mut style_children=Vec::new();
 
         for child in &node.children{

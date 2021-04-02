@@ -1,8 +1,6 @@
 # Rust_Browser
 This is just a simple effort to create an browser using Rust language which has a GUI and can parse HTML and CSS files easily. 
 
-# Development is still in progress 😄
-
 This project aims to demonstrate how a web browser parses HTML files to create a DOM and applies CSS to it.It is not as fast as the browsers used for everyday work but it is just a test sample.The code is easily readable so anyone who understands rust can easily read this code and also develop it by himself/herself.
 
 I will soon update the readme accordingly as the updates happen
@@ -20,6 +18,14 @@ I will soon update the readme accordingly as the updates happen
 
 6.styletree.rs-This tree is generated from css parser tree and it helps to determine the actual dimensions and colors of each element in the DOM.
 
-### I will be posting new image so that it will be easy to understand how all trees work and the actual flow of rendering from HTML and CSS to screen.
+7.screenrender.rs-This file contains the commands to display the actual elements on the screen using gfx library.
 
-## Will update as soon as possible for fresh changes 👍
+8.screencommanddisplay-Convert the layout tree to display commands so that it can be rendered on the screen
+
+9./websrc-Contains the template parsable html and css code
+
+10./bin -Contains the actual code which can execute after running .
+
+## While running there is a library problem but it will be resolved soon.The source code for the project is correct and can be easily used for refrence 
+
+

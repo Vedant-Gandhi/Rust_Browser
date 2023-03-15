@@ -26,6 +26,6 @@ I will soon update the readme accordingly as the updates happen
 
 10./bin -Contains the actual code which can execute after running .
 
-## While running there is a library problem but it will be resolved soon.The source code for the project is correct and can be easily used for refrence 
+## There is an issue in CSS Parser. If someone is intrested you can reach me out I am ready to explain the complete problem with cause as I need help in fixing it.
 
 

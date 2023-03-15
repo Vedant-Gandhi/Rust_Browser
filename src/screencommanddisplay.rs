@@ -11,6 +11,8 @@ pub enum DisplayCommand {
 pub fn get_display_command_list(root: &LayoutContainer) -> DisplayCommandList {
     let mut commands = Vec::new();
     render_layout_container(&mut commands, root);
+
+    println!("Commands in func : {:?}", commands);
     commands
 }
 
@@ -33,12 +35,17 @@ fn render_background(commands: &mut DisplayCommandList, root: &LayoutContainer) 
 }
 
 fn get_background_color(layout_container: &LayoutContainer, name: &str) -> Option<Color> {
+    println!(
+        "Name in func : {} \n and value : {:?}",
+        name,
+        layout_container.style_node.get_value(name)
+    );
     match layout_container.style_node.get_value(name) {
         Some(v) => match **v {
             Value::Color(ref c) => return Some(c.clone()),
             _ => return None,
         },
-        _ => return None,
+        None => return None,
     }
 }
 

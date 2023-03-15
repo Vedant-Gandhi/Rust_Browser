@@ -10,11 +10,10 @@ use std::io::{BufReader, Read};
 
 fn main() {
     let html = get_html();
-    println!("HTML:{:?}", html);
+
     let ref root_node = html[0];
 
     let css = get_css();
-    println!("CSS : {:?}", css);
 
     let styletree_root = styletree::StyleNode::new(&root_node, &css);
 

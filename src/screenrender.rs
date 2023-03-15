@@ -1,10 +1,8 @@
-
 use gfx;
 use gfx_text;
 use gfx_window_glutin;
 use glutin;
 
-use gfx::Factory;
 use gfx::traits::FactoryExt;
 use gfx::Device;
 
@@ -18,7 +16,7 @@ const SCREEN_WIDTH: usize = 1024;
 const SCREEN_HEIGHT: usize = 768;
 const CLEAR_COLOR: [f32; 4] = [1.0, 1.0, 1.0, 1.0];
 
-gfx_defines!{
+gfx_defines! {
     vertex Vertex {
         pos: [f32; 2] = "a_Pos",
         color: [f32; 3] = "a_Color",
@@ -103,7 +101,6 @@ fn transform_rectangle(rect: &layouttree::Rectangle) -> (f32, f32, f32, f32) {
     (x, y, h, w)
 }
 
-
 pub fn render_loop(command_list: &[DisplayCommand]) {
     let builder = glutin::WindowBuilder::new()
         .with_title(String::from("Browser"))
@@ -124,6 +121,7 @@ pub fn render_loop(command_list: &[DisplayCommand]) {
         .unwrap();
 
     let (vertices, index_data) = render_commands(command_list);
+    println!("Command List: {:?}", command_list);
     let texts = render_texts(command_list);
 
     let (vertex_buffer, slice) =
@@ -139,8 +137,8 @@ pub fn render_loop(command_list: &[DisplayCommand]) {
     'main: loop {
         for event in window.poll_events() {
             match event {
-                glutin::Event::KeyboardInput(_, _, Some(glutin::VirtualKeyCode::Escape)) |
-                glutin::Event::Closed => break 'main,
+                glutin::Event::KeyboardInput(_, _, Some(glutin::VirtualKeyCode::Escape))
+                | glutin::Event::Closed => break 'main,
                 _ => {}
             }
         }
